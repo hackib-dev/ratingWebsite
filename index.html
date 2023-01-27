@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+     />
+     <link rel="stylesheet"  href="./assets/css/styles.css">
+
+     <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+     crossorigin="anonymous">
+   </script>
+
+    <title>Rating Website</title>
+
+</head>
+
+<body>
+  <main>
+    <div class="star">
+      <img class='image' src="./assets/images/icon-star.svg" alt="rating star">
+    </div>
+    <div class="content" id="sat">
+      <h1>How did we do?</h1>
+
+      <p> Please let us know how we did with your support request.
+        All feedback is appreciated to help us improve our offering! 
+      </p>
+    </div>
+
+    <div class="rates">
+      <input type="radio" class="rate"  name="rating" id="rate1" value="1">
+      <label for="rate1" class="rating_button">1</label>
+      
+      <input type="radio" class="rate" name="rating" id="rate2" value="2">
+      <label for="rate2" class="rating_button">2</label>
+      
+      <input type="radio" class="rate" name="rating" id="rate3" value="3">
+      <label for="rate3" class="rating_button">3</label>
+      
+      <input type="radio" class="rate" name="rating" id="rate4" value="4">
+      <label for="rate4" class="rating_button">4</label>
+      
+      <input type="radio" class="rate" name="rating" id="rate5" value="5">
+      <label for="rate5" class="rating_button">5</label>
+      
+      </div>
+      
+      <button onclick="ratings()" class="submit goldbackground mt-4 form-control p-2" id="submit_btn" type="submit">SUBMIT</button>
+
+</main>
+
+
+
+<script src="./assets/js/styles.js"></script>
+<script src="./assets/js/bootstrap.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+
+<script>
+
+  function ratings()
+  {
+  var newRating = document.querySelector('input[name="rating"]:checked').value;
+
+console.log(newRating)
+
+  localStorage.setItem("userInput",newRating);
+
+  window.location.href = "Thank_you.html";
+
+  }
+
+</script>
+
+
+</body>
+
+</html>
